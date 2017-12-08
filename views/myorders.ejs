@@ -1,0 +1,18 @@
+<% include partials/header.ejs %>
+  <div id="imagebox-2">
+
+   <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;" >
+     <tr>
+       <td width="21%" align="left" valign="middle" bgcolor="#FFBB46" class="c-board"><strong>Our Products</strong></td>
+       <td width="26%" align="left" valign="middle" bgcolor="#FFBB46" class="c-board"><strong>delete </strong></td>
+       </tr>
+       <% orders.forEach(function(order){ %>
+
+     <tr>
+       <td align="left" valign="middle" bgcolor="#FFFFFF" class="c-board"><%= order.product %> </td>
+          <td align="left" valign="middle" bgcolor="#FFFFFF" class="c-board"><a class="confirmation" href="/products/delete/<%= order._id %>">Delete</a></td>
+        
+        <% }) %>
+   </table>
+
+<% include partials/footer.ejs %>

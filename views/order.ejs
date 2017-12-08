@@ -1,0 +1,37 @@
+<% include partials/header.ejs %>
+
+
+
+<div id="imagebox">
+
+
+    <h2>Fill yor form to cofirm order for</h2><h1> <%= product.productname %> </h1></h2>
+    <form method="post" action="/products/order">
+<table>
+      <tr>  <label>
+              <td width="77" align="right" valign="middle" class="text_inner">Addres : </td>
+              <td width="150" height="30" align="left" valign="middle">
+              </label>
+                  <textarea   name="address" id="address" required=""/></textarea>
+                </td>
+              </tr>
+              <tr>
+  <td width="77" align="right" valign="middle" class="text_inner">Phone : </td>
+  <td width="150" height="30" align="left" valign="middle">
+    <label>
+      <input  type="text" id="phone" name="phone"/>
+      </label>
+    </td>
+  </tr>
+    <input name="product" type="text" id="product" value="<%= product.productname %>"  hidden="hidden"/>
+      <input name="username" type="text" id="username" value="<%= user.username %>"  hidden="hidden"/>
+      <tr><td>
+<button class="btn btn-success col-sm-offset-2">Add</button></td></tr>
+</table>
+
+    </form>
+
+
+
+</div>
+<% include partials/footer.ejs %>

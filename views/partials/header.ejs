@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!DOCTYPE html PUBLIC >
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title><%title%></title></title>
+<link rel="stylesheet" href="/stylesheets/css_index.css" />
+<link rel="stylesheet" href="/stylesheets/ddsmoothmenu.css" />
+<link rel="stylesheet" href="/stylesheets/ddsmoothmenu-v.css" />
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="header_box">
+   <div id="header"><a href="#"><img src="/images/header.jpg" width="474" height="97" border="0" /></a></div>
+    <div id="searchbox"> <a href="/auth/register">
+   <img src="/images/button.jpg" width="277" height="96" border="0" usemap="#Map" />
+  </a>
+
+
+    <script type="text/javascript">
+
+    ddsmoothmenu.init({
+    	mainmenuid: "smoothmenu1",
+    	orientation: 'h',
+    	classname: 'ddsmoothmenu',
+    	contentsource: "markup"
+    })
+
+    </script>
+
+
+  </div>
+    <div id="contentarea_2">
+
+      <div id="smoothmenu1" class="ddsmoothmenu">
+        <ul>
+          <% if(!user){ %>
+          <li><a href="/">Please Login</a></li>
+  <% } else { %>
+            <li><a href="/products/add">add products</a> </li>
+
+          <li > <a class="confirmation" href="/products/orderfind/<%= user.username %>" >My orders</a></li>
+                    <li><a href="/products">products</a></li>
+        <li > <a href="#" > Welcome, <%= user.username %></a></li>
+          <li ><a href="/auth/logout" >Logout</a></li>
+    <% } %>
+        </li>
+      </ul>
+      </div>
+   </div>

@@ -1,0 +1,43 @@
+<% include partials/header.ejs %>
+
+
+
+<div id="imagebox">
+
+
+    <h2>Fill yor form to update Product</h2><h1> </h1></h2>
+    <form method="post">
+<table>
+      <tr>  <label>
+              <td width="77" align="right" valign="middle" class="text_inner">Product : </td>
+              <td width="150" height="30" align="left"  valign="middle">
+              </label>
+                  <textarea   name="productname" id="productname" value="<%= product.productname %>" required=""/></textarea>
+                </td>
+              </tr>
+              <tr>
+  <td width="77" align="right" valign="middle" class="text_inner">brand : </td>
+  <td width="150" height="30" align="left"   valign="middle">
+    <label>
+      <input  type="text" id="brand" value="<%= product.brand %>" name="brand"/>
+      </label>
+    </td>
+  </tr>
+  <tr>
+<td width="77" align="right" valign="middle" class="text_inner">price : </td>
+<td width="150" height="30" align="left"   valign="middle">
+<label>
+<input  type="text" id="price" value="<%= product.price %>" name="price"/>
+</label>
+</td>
+</tr>
+      <tr><td>
+<button class="btn btn-success col-sm-offset-2">update</button></td></tr>
+</table>
+
+    </form>
+
+
+
+</div>
+<% include partials/footer.ejs %>
